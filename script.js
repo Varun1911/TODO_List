@@ -127,4 +127,4 @@ function reorderList(e)
     listContainer.insertBefore(draggingItem, nextSibling);
 }
 
-listContainer.addEventListener("dragover", reorderList)
+listContainer.addEventListener("dragover", reorderList);

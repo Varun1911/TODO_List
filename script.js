@@ -119,7 +119,8 @@ function reorderList(e)
     const siblings = [...listContainer.querySelectorAll("li:not(.draggable)")];
     
     let nextSibling = siblings.find(sibling => {
-        return e.clientY <= sibling.offsetTop + sibling.offsetHeight / 2; 
+        const rect = sibling.getBoundingClientRect();
+        return e.clientY <= rect.top + sibling.offsetHeight / 2; 
     })
 
     // console.log(nextSibling);
